@@ -1,5 +1,5 @@
 body {
-  background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7));
+  background-image: linear-gradient(rgba(242,241,206,0.5), rgba(242,241,206,0.5));
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -12158,7 +12158,7 @@ fieldset[disabled] .button:not(input).is-grey-lightest.is-inverted:before:before
   background: #fcee09 !important;
 }
 .tags.has-addons .tag:last-child {
-  background: #02d7f2 !important;
+  background: #ff8e3c !important;
 }
 .pagination-previous,
 .pagination-next,
