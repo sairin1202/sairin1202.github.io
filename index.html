@@ -1,165 +1,368 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="sairin1202.gitHub.io : ">
-
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <style> 
-        .container {
-          max-width: 700px;
-          margin: auto;
-        }
-        </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hong Chen - Homepage</title>
-  </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 
-  <body>
-    <div class="container p-3">
-        <div class="row justify-content-md-center">
-            <!-- MAIN CONTENT -->
-            <div class="col-8">
-                <div>					
-                    <h3>Hong Chen</h3>
-                </div>
-                <p>
-                    Ph.D. Student
-                    <br>Graduate School of Information Science and Technology
-                    <br>The University of Tokyo
-                    <br><i class="fa fa-envelope-o">&nbsp;&nbsp;</i>chen<i class="fa fa-at" aria-hidden="true"></i>nlab.ci.i.u-tokyo.ac.jp
-                </p>
-            </div>
-            <div class="col-4">
-                <img src="me.png" border="0" width="150">
-            </div>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+
+
+    <style>
+        body {
+            background-image: url('pokemon-background.jpg');
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the background image */
+            background-attachment: fixed; /* Optional: Makes the background fixed during scroll */
+
+        }
+
+        .section, .profile-header {
+            border: 2px solid #F85888; /* Pokéball Red */
+            background-color: #ffffff;
+        }
+
+        .section-title {
+            font-family: 'Press Start 2P', cursive;
+        }
+        .section ul li {
+            list-style-type: none; /* Removes the default list bullet */
+            margin-bottom: 15px; /* Adds some space between list items */
+            /* align-items: center; Aligns the image and text vertically */
+            /* display: flex; Layout the image and text in a row */
+        }
+
+        .section ul li img {
+            margin-right: 10px; /* Adds some space between the image and text */
+            vertical-align: middle; /* Aligns the image with the text */
+        }
+        .container {
+            max-width: 960px;
+            margin: auto;
+            padding: 20px;
+        }
+        .profile-header {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .profile-header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .fa {
+            margin-right: 5px;
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .work-experience {
+            list-style: none;
+            padding: 0;
+        }
+
+        .work-experience li {
+            margin-bottom: 15px;
+        }
+
+        .work-experience li:last-child {
+            margin-bottom: 0;
+        }
+
+        .work-experience .role {
+            font-weight: bold;
+        }
+
+        .work-experience .company {
+            font-style: italic;
+        }
+
+        .work-experience .description {
+            margin-top: 5px;
+            font-size: 0.9em;
+        }
+
+        .work-experience .date {
+            font-size: 0.8em;
+            color: #666;
+        }
+
+        .languages {
+        list-style: none;
+        padding: 0;
+        }
+
+        .languages li {
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+
+        .languages .language-name {
+            font-weight: bold;
+        }
+
+        .languages .proficiency {
+            display: inline-block;
+            margin-left: 10px;
+            padding: 2px 5px;
+            background-color: #007bff;
+            color: #ffffff;
+            border-radius: 5px;
+            font-size: 0.8em;
+        }
+
+        .education-timeline {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .education-timeline .edu-item {
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .education-timeline .edu-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .education-timeline .edu-item:before {
+            content: "\f19d"; /* FontAwesome icon for "graduation cap" */
+            font-family: "FontAwesome";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #007bff; /* Adjust the color to fit your design */
+        }
+
+        .education-timeline .date {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .education-timeline .degree {
+            font-weight: bold;
+            display: block; /* Change to inline-block if you prefer it on the same line */
+        }
+
+        .education-timeline .institution {
+            font-style: italic;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        .profile-header img:hover {
+            transform: scale(1.1); /* Makes the image slightly larger on hover */
+            transition: transform 0.2s ease-in-out;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-title img {
+                height: 20px; /* Adjust icon size on smaller screens */
+            }
+        }
+        .pokeball-icon {
+            animation: float 3s ease-in-out infinite;
+        }
+        .section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+
+        .section-title {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+    </style>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="profile-header text-center">
+            <img src="me.jpeg" alt="Hong Chen">
+            <h2>Hong Chen</h2>
+            <p>Ph.D. Student, The University of Tokyo</p>
+            <p><i class="fa fa-envelope-o"></i>sairin1202<i class="fa fa-at"></i>gmail.com</p>
         </div>
 
-        <div class="row justify-content-md-center bg-white">
-            <h3 class="text-primary">Biography</h3>
-            <p>
-                I am a NLP engineer at Tiktok, Singapore.
-                I was a Ph.D. student at the University of Tokyo, under the supervision of <a class="link-secondary" target="_blank" rel="noopener" href="http://www.nlab.ci.i.u-tokyo.ac.jp/">Prof. Hideki Nakayama</a>,
-                and also the visiting scholar in PLUSLAB, UCLA, supervised by <a class="link-secondary" target="_blank" rel="noopener" href="https://vnpeng.net/">Prof. Nanyun Peng</a>.
-                My research interests are story related tasks (understanding and generation) and vision-language tasks.
-            </p>
+        <div class="section" data-aos="fade-up">
+            <h3 class="section-title">Biography</h3>
+
+            <p>As an NLP Engineer at Bytedance LLM in Singapore, I focus on refining large language models to drive innovation in natural language generation, with my current project centered on building character-based LLMs. My expertise in NLP was further developed at TikTok, where I deployed transformative solutions for customer service automation. Previously, I contributed to groundbreaking AI research at AIST, Japan, and worked on enhancing AI technologies at Toyota. My journey in AI commenced at Huawei Technologies, where I played a key role in advancing AI model development. My career is fueled by a passion for the intersection of AI, NLP, and technological innovation.</p>
+        </div>
+
+
+        <div class="section" data-aos="fade-up">
+            <h3 class="section-title"> Education</h3>
+
+            <ul class="education-timeline">
+                <li class="edu-item">
+                    <div class="date">2021.10 - 2022.6</div>
+                    <span class="degree">Visiting Scholar (UCLA)</span>
+                    <div class="institution">Supervisor: Prof. Nanyun Peng</div>
+                </li>
+                <li class="edu-item">
+                    <div class="date">2017.4 - 2022.9</div>
+                    <span class="degree">Ph.D. (The University of Tokyo)</span>
+                    <div class="institution">Supervisor: Prof. Hideki Nakayama</div>
+                </li>
+                <li class="edu-item">
+                    <div class="date">2012.9 - 2016.7</div>
+                    <span class="degree">B.Eng. (Shandong University)</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section" data-aos="fade-up">
+            <h3 class="section-title"> Research Experience</h3>
+            <ul>
+                <li>
+                    <img src="pokeball.png" alt="" style="height: 24px; width: auto; vertical-align: middle;"> 
+                    <strong>Character-Centric Story Visualization via Visual Planning and Token Alignment</strong><br>
+                H Chen, R Han, T Wu, H Nakayama, N Peng<br>
+                <i>Conference on Empirical Methods in Natural Language Processing (EMNLP2022) (long paper)</i></li>
+
+                <li>
+                    <img src="pokeball.png" alt="" style="height: 24px; width: auto; vertical-align: middle;"> 
+                    <strong>StoryER: Automatic Story Evaluation via Ranking, Rating and Reasoning</strong><br>
+                H Chen, V Minh-duc, H Takamura, Y Miyao, H Nakayama<br>
+                <i>Conference on Empirical Methods in Natural Language Processing (EMNLP 2022) (long paper)</i></li>
+
+                <li>
+                    <img src="pokeball.png" alt="" style="height: 24px; width: auto; vertical-align: middle;"> 
+                    <strong>NOC-REK: Novel Object Captioning with Retrieved Vocabulary from External Knowledge</strong><br>
+                DM Vo, H Chen, A Sugimoto, H Nakayama<br>
+                <i>The IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR 2022)</i></li>
+
+                <li>
+                    <img src="pokeball.png" alt="" style="height: 24px; width: auto; vertical-align: middle;"> 
+                    <strong>Go Back in Time: Generating Flashbacks in Stories with Event Temporal Prompts</strong><br>
+                R Han, H Chen, Y Tian, N Peng<br>
+                <i>North American Chapter of the Association for Computational Linguistics (NAACL2022)</i></li>
+
+                <li>
+                    <img src="pokeball.png" alt="" style="height: 24px; width: auto; vertical-align: middle;"> 
+                    <strong>SciXGen: A Scientific Paper Dataset for Context-Aware Text Generation</strong><br>
+                H Chen, H Takamura, H Nakayama<br>
+                <i>Findings of the Association for Computational Linguistics: (EMNLP 2021) (long paper)</i></li>
+
+                <li>
+                    <img src="pokeball.png" alt="" style="height: 24px; width: auto; vertical-align: middle;"> 
+                    <strong>GraphPlan: Story Generation by Planning with Event GraphPlan</strong><br>
+                H Chen, R Shu, H Takamura, H Nakayama<br>
+                <i>The 14th International Conference on Natural Language Generation (INLG2021) (long paper)</i></li>
+
+                <li>
+                    <img src="pokeball.png" alt="" style="height: 24px; width: auto; vertical-align: middle;"> 
+                    <strong>Commonsense Knowledge Aware Concept Selection For Diverse and Informative Visual Storytelling</strong><br>
+                H Chen, Y Huang, H Takamura, H Nakayama<br>
+                <i>Thirty-Fifth AAAI Conference on Artificial Intelligence (AAAI2021)</i></li>
+                
+                <li>
+                    <img src="pokeball.png" alt="" style="height: 24px; width: auto; vertical-align: middle;"> 
+                    <strong>Object Recognition With Continual Open Set Domain Adaptation for Home Robot</strong><br>
+                I Kishida, H Chen, M Baba, J Jin, A Amma, H Nakayama<br>
+                <i>Winter Conference on Applications of Computer Vision (WACV2021)</i></li>
+
+                <li>
+                    <img src="pokeball.png" alt="" style="height: 24px; width: auto; vertical-align: middle;"> 
+                    <strong>Semantic Aware Attention Based Deep Object Co-segmentation</strong><br>
+                H Chen, Y Huang, H Nakayama<br>
+                <i>14th Asian Conference on Computer Vision (ACCV2018)</i></li>
+            </ul>
+        </div>
+
+        <div class="section" data-aos="fade-up">
+            <h3 class="section-title"> Work Experience</h3>
+            <ul class="work-experience">
+                <li>
+                    <img src="pokeball.png" alt="" style="height: 24px; width: auto; vertical-align: middle;"> 
+                    <span class="role">NLP Engineer</span> at <span class="company">Bytedance LLM, Singapore</span>
+                    <div class="date">2023.4 - Present</div>
+                    <div class="description">Working on LLM (large language model) to improve natural language generation capabilities for various applications, such as Doubao.</div>
+                </li>
+                <li>
+                    <img src="pokeball.png" alt="" style="height: 24px; width: auto; vertical-align: middle;"> 
+                    <span class="role">NLP Engineer</span> at <span class="company">Tiktok Ecommerce Intelligent Customer Service, Singapore</span>
+                    <div class="date">2022.9 - 2023.4</div>
+                    <div class="description">Developed and integrated NLP solutions to enhance the customer service experience through automation and intelligence.</div>
+                </li>
+                <li>
+                    <img src="pokeball.png" alt="" style="height: 24px; width: auto; vertical-align: middle;"> 
+                    <span class="role">Research Assistant</span> at <span class="company">National Institute of Advanced Industrial Science and Technology (AIST), Japan</span>
+                    <div class="date">2019.8 - 2021.10</div>
+                    <div class="description">Engaged in cutting-edge research to advance the field of artificial intelligence, focusing on natural language processing.</div>
+                </li>
+                <li>
+                    <img src="pokeball.png" alt="" style="height: 24px; width: auto; vertical-align: middle;"> 
+                    <span class="role">Project Cooperation</span> at <span class="company">Toyota, Japan</span>
+                    <div class="date">2019.10 - 2020.1</div>
+                    <div class="description">Collaborated on a project aimed at improving HSR (human support robot) through image recognition on continue learning.</div>
+                </li>
+                <li>
+                    <img src="pokeball.png" alt="" style="height: 24px; width: auto; vertical-align: middle;"> 
+                    <span class="role">Research Assistant (Excellent intern student)</span> at <span class="company">Huawei Technologies, Japan</span>
+                    <div class="date">2018.11 - 2019.4</div>
+                    <div class="description">Contributed to the development of AI models for image recognition and detection.</div>
+                </li>
+            </ul>
         </div>
         
 
-        <div class="row justify-content-md-center bg-light">
-            <h3 class="text-primary">Research Interest</h3>      
-            <div>
-                <ul>
-                    <li>Natural Language Generation</li>
-                    <li>Vision Language Multimodal</li>			
-                </ul>
-            </div>    
+        <div class="section" data-aos="fade-up">
+            
+            <h3 class="section-title"> Language</h3>
+            <ul class="languages">
+                <li><span class="language-name">Chinese</span><span class="proficiency">Native</span></li>
+                <li><span class="language-name">Japanese</span><span class="proficiency">Fluent</span></li>
+                <li><span class="language-name">English</span><span class="proficiency">Professional</span></li>
+            </ul>
         </div>
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
 
-        <div class="row justify-content-md-center bg-white">
-            <h3 class="text-primary">Education</h3>      
-            <div>
-                <ul>
-                    <li>
-                        2020.10 - present: <br>
-                        Visiting Scholar (UCLA) <br>
-                        Supervisor: Prof. Nanyun Peng
-                    </li>
-                    <li>
-                        2019.4 - present: <br>
-                        Ph.D. (The University of Tokyo) <br>
-                        Supervisor: Prof. Hideki Nakayama
-                    </li>
-                    <li>
-                        2019.4 - present: <br>
-                        M.Sc. (The University of Tokyo) <br>
-                        Supervisor: Prof. Hideki Nakayama
-                    </li>
-                    <li>
-                        2019.4 - present: <br>
-                        B.Eng. (Shandong University) <br>
-                    </li>		
-                </ul>
-            </div>    
-        </div>
+</body>
 
-        <div class="row justify-content-md-center bg-light">
-            <h3 class="text-primary">Research Experience</h3>      
-            <div>
-                <ul>
-                    <li><b>Character-Centric Story Visualization via Visual Planning and Token Alignment</b><br>
-                    <strong>H Chen</strong>, R Han, T Wu, H Nakayama, N Peng<br>
-                    <i>Conference on Empirical Methods in Natural Language Processing (EMNLP2022) (long paper)</i>
-                    </li>
-
-                    <li><b>StoryER: Automatic Story Evaluation via Ranking, Rating and Reasoning</b><br>
-                        <strong>H Chen</strong>, V Minh-duc, H Takamura, Y Miyao, H Nakayama<br>
-                        <i>Conference on Empirical Methods in Natural Language Processing (EMNLP 2022) (long paper)</i>
-                    </li>  
-		    <li><b>NOC-REK: Novel Object Captioning with Retrieved Vocabulary from External Knowledge</b><br>
-			DM Vo, <strong>H Chen</strong>, A Sugimoto, H Nakayama<br>
-			<i>The IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR 2022)</i>
-		    </li>
-
-                    <li><b>Go Back in Time: Generating Flashbacks in Stories with Event Temporal Prompts</b><br>
-                    R Han, <strong>H Chen</strong>, Y Tian, N Peng<br>
-                    <i>North American Chapter of the Association for Computational Linguistics (NAACL2022)</i>
-                    </li>    
-
-                    <li><b>SciXGen: A Scientific Paper Dataset for Context-Aware Text Generation</b><br>
-                        <strong>H Chen</strong>, H Takamura, H Nakayama<br>
-                        <i>Findings of the Association for Computational Linguistics: (EMNLP 2021) (long paper)</i>
-                    </li>
-                    <li><b>GraphPlan: Story Generation by Planning with Event GraphPlan</b><br>
-                        <strong>H Chen</strong>, R Shu, H Takamura, H Nakayama<br>
-                        <i>The 14th International Conference on Natural Language Generation (INLG2021) (long paper)</i>
-                    </li>
-                    <li><b>Commonsense Knowledge Aware Concept Selection For Diverse and Informative Visual Storytelling</b><br>
-                        <strong>H Chen</strong>, Y Huang, H Takamura, H Nakayama<br>
-                        <i>Thirty-Fifth AAAI Conference on Artificial Intelligence (AAAI2021)</i>
-                    <li><b>Object Recognition With Continual Open Set Domain Adaptation for Home Robot</b><br>
-                        I Kishida, <strong>H Chen</strong>, M Baba, J Jin, A Amma, H Nakayama<br>
-                        <i>Winter Conference on Applications of Computer Vision (WACV2021)</i>
-                    <li><b>Semantic Aware Attention Based Deep Object Co-segmentation</b><br>
-                        <strong>H Chen</strong>, Y Huang, H Nakayama<br>
-                        <i>14th Asian Conference on Computer Vision (ACCV2018)</i>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row justify-content-md-center bg-white">
-            <h3 class="text-primary">Work Experience</h3>      
-            <div>
-                <ul>
-                    <li>2019.8 - 2021.10: <br>National Institute of Advanced Industrial Science and Technology (AIST), Japan <br>
-                        Research Assistant
-                    </li> 
-                    <li>2019.10 - 2020.1: <br>Toyota, Japan<br>
-                        Project Cooperation
-                    </li>            
-                    <li>2018.11 - 2019.4: <br>Huawei Technologies, Japan <br>
-                        Research Assistant (Excellent intern student)
-                    </li>   
-                </ul>
-            </div>
-        </div>
-
-        <div class="row justify-content-md-center bg-light">
-            <h3 class="text-primary">Language</h3>      
-            <div>
-                <ul>
-                    <li>Chinese</li>
-                    <li>Japanses</li>
-                    <li>English</li>
-                </ul>
-            </div>
-        </div>
-        
-    <div>
-
-  </body>
 </html>
